@@ -1,1 +1,0 @@
-alert("XIn chao world");
