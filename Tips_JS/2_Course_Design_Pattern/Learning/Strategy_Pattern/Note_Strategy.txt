@@ -1,0 +1,25 @@
+#########################Introduction#######################
+
+Problem
+    find the way to
+        limit using if else for many cases
+    
+    can be interchangeable without impact on whole infrastructure directly
+
+    => separate into function
+        separate into many class : human -> student => employees
+
+#########################-Main Note-#######################
+
+1. getPrice (originalPrice , typePromotion = 'default')
+
+
+    preOrder : originalPrice * 0.8 (20% discount)
+    promotion - sales: originalPrice <= 200 ? originalPrice *0.9 : originalPrice -30
+    blackFriday:
+    ...
+    default : return originalPrice
+    more event 
+
+    ==> cannot add immediately for each one
+

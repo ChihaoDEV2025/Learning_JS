@@ -1,0 +1,10 @@
+1/ 
+
+object{
+    key : value(parameter) = function()
+
+}
+
+return object[key](parameter)
+
+========================================================

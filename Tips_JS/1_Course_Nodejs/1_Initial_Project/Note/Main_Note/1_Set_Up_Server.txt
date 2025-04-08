@@ -1,0 +1,44 @@
+#1. Set up: Directories and Files
+
+Directories:
+    Src
+        (mvc)
+        models
+        services
+        controllers
+
+        (more...)
+        configs (!= .env)
+        utils
+
+        //
+        dbs => contains MongoDB
+        helpers => count connections and check max size
+Files
+    app.js => to init router , express ,...
+    server.js 
+        start the server
+        cannot change anything
+        interact with network via Node.js
+        add port to start the server
+
+
+    .gitignore -> ignore: node_modules + .env
+    .env
+
+set npm
+    npm init -y => initialize project without filling in information
+    npm i express --save 
+    npm i nodemon --save-dev => support changing file and restart server
+
+ 
+
+code:
+    App.js
+    Server.js
+    create dbs  
+        init.mongodb.js (level 0 + level xxx)
+    create helpers  
+
+    .env (compare to configs file)
+    configs 

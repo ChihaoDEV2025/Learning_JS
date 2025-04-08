@@ -1,0 +1,27 @@
+##################################################################
+1.high level : generate code by class
+
+
+#############################################################
+2. status: 200 success
+        201 created => for post or create account
+
+
+
+#############################################################
+3. Need at least one routs to start the server
+
+
+
+#############################################################
+4. using variable to use postman -> check file
+
+@url_dev = http://localhost:3056/v1/api/
+
+
+### sign up
+POST {{url_dev}}shop/signup
+
+
+#############################################################
+5.  

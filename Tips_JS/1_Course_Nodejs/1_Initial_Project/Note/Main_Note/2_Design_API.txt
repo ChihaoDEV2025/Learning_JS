@@ -1,0 +1,25 @@
+#2. API
+
+Directories: (we're going to use in this section)
+    controllers => write behavior of HTTP request
+                    the function will sign up => add to the function of routers directories
+    models
+    routers (further) => to replace init rout in app.js
+    postman (further) => send request
+
+
+1. models
+    shop.mode.js
+
+2. controllers 
+    access.controller.js
+
+3.routers
+    index.js    
+    access  
+        index.js
+
+=> handle each tasks by routes individually
+
+4.postman
+    access.post.http
