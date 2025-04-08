@@ -1,0 +1,31 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChihaoDEV2025/Tips_JS_Nodejs_Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChihaoDEV2025/Tips_JS_Nodejs_Project/issues"
+  },
+  "homepage": "https://github.com/ChihaoDEV2025/Tips_JS_Nodejs_Project#readme",
+  "description": ""
+}

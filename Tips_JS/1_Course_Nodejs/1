@@ -1,0 +1,30 @@
+
+-------------------------------------------------------
+4/1/2025 - set api
+models -> routers
+
+    models:/
+    routers: -> instead of using get('/') in app.js -> using that stuff in router.js
+            //code
+
+            using more the  folders in routers directory to handle tasks on their own
+
+            routers to write route : get post ('/shop/signup',()=>{})
+            controllers to write their behavior ,then require and using that method
+
+next,
+        create postman directory ,
+                 create file access.post.http (download rest client to use .http file)
+
+                //use variable @variable = link in common
+                 run: click send request that render ahead of HTTP request
+
+                 
+undone: fix error and run post request
+        How to connect the file together : app.use , process.on , require...
+
+------------------------------------------------
+//high level : generate code by class
+
+status: 200 success
+        201 created => for post or create account
