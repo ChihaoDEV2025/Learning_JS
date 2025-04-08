@@ -1,3 +1,5 @@
+#Note : => / <=  not \
+
 #1. Coursera
 
 #2. DSA
@@ -5,11 +7,11 @@
 #3. Ga lai lap trinh
 
 ##3.1Js Learning => too much and unnecessary
-GaLaiLapTrinh\Java_learnign
+GaLaiLapTrinh/Java_learnign
 
 
 #4. Tips js
 
 ## 4.1on-demand ignored files on project
-Tips_JS\1_Course_Nodejs\node_modules 
-Tips_JS\1_Course_Nodejs\.env
+Tips_JS/1_Course_Nodejs/node_modules 
+Tips_JS/1_Course_Nodejs/.env
