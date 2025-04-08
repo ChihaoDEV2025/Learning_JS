@@ -1,0 +1,34 @@
+Git -> ignore the subdirectory
+
+//------------------------------------------------------------------------//
+
+tips_js/            ← root folder (you want to push this on GitHub)
+├── nodejs/         ← you want to ignore some files or folders in here
+│   ├── keep_this.js
+│   └── ignore_this.js
+├── revising/
+├── note/
+└── .gitignore      ← you'll use this to exclude unwanted stuff
+	
+
+//------------------------------------------------------------------------//
+# Ignore specific files in nodejs/
+nodejs/ignore_this.js
+nodejs/temp_folder/
+
+# Optional: ignore system or log files 
+*.log
+.DS_Store
+
+
+
+//------------------------------------------------------------------------//
+
+//Log file
+
+ a plain text file that
+		 records events,
+			 processes, 
+			 errors, or
+			 other information about 
+what a software application, system, or server is doing.
