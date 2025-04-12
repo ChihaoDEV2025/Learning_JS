@@ -1,0 +1,6 @@
+To console.log the json file
+
+${JSON.stringify(location)}
+
+
+2. To redirect the previous folders : cd ../../../
