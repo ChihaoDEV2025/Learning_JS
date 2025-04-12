@@ -3,20 +3,20 @@
 Directories: (we're going to use in this section)
     controllers => write behavior of HTTP request
                     the function will sign up => add to the function of routers directories
-    models
+    models 
     routers (further) => to replace init rout in app.js
     postman (further) => send request
 
 
 1. models
-    shop.mode.js
+    shop.model.js   => database table for users or customers
 
 2. controllers 
-    access.controller.js
+    access.controller.js  => signUp , ....
 
 3.routers
-    index.js    
-    access  
+    index.js    => root routs
+    access   => rootrouts/signUp/...
         index.js
 
 => handle each tasks by routes individually
