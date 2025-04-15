@@ -3,7 +3,7 @@
 Directories:
     Src
         (mvc)
-        models
+        models => set database (name - age - user ...)
         services
         controllers
 
@@ -38,6 +38,7 @@ code:
     Server.js
     create dbs  
         init.mongodb.js (level 0 + level xxx)
+            
     create helpers  
 
     .env (compare to configs file)

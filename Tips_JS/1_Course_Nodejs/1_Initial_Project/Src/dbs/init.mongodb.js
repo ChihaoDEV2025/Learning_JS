@@ -1,46 +1,23 @@
-"use strict"; //explain here
+//get mongoose dependency => install
+let mongoose = require("mongoose");
+//URL or connectString
 
-const mongoose = require("mongoose");
-const {
-  db: { host, name, port },
-} = require("../configs/config.mongodb");
-const connectString = `mongodb://${host}:${port}/${name}`;
+//mongodb://{host}:port/name
 
-//"mongodb://localhost:27017/shopDEV"
+const connectString = "mongodb://localhost:20347/shopDev";
+//using promise to using connect() of mongoose
+mongoose
+  .connect(connectString)
+  .then(() => {
+    console.log("Connect MongoDB Successfully!!!!!!");
+  })
+  .catch((e) => {
+    console.log("Error Connect: " + e);
+  });
 
-//count Connection in ./helpers/check.connect.js
-const { countConnect } = require("../helpers/check.connect");
+//dev
+mongoose.set("debug", true);
+mongoose.set("debug", { color: true });
 
-class Database {
-  constructor() {
-    this.connect();
-  }
-
-  //connect
-  connect(type = "mongodb") {
-    if (1 === 1) {
-      mongoose.set("debug", true);
-      mongoose.set("debug", { color: true });
-    }
-
-    mongoose
-      .connect(connectString)
-      .then((_) =>
-        //add here to check connection
-        console.log("Connected Mongodb Success Pro: ", countConnect())
-      )
-      .catch((err) => {
-        console.log("Error Connect");
-      });
-  }
-
-  static getInstance() {
-    if (!Database.instance) {
-      Database.instance = new Database();
-    }
-    return Database.instance;
-  }
-}
-
-const instanceMongoDB = Database.getInstance();
-module.exports = instanceMongoDB;
+//export
+module.exports = mongoose;

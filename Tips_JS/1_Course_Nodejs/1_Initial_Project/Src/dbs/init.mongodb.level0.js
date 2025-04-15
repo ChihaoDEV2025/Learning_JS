@@ -1,22 +1,53 @@
 "use strict"; //explain here
 
 const mongoose = require("mongoose");
+const {
+  db: { host, name, port },
+} = require("../configs/config.mongodb");
+const connectString = `mongodb://${host}:${port}/${name}`;
 
-const connectString = "mongodb://localhost:27017/shopDEV";
-mongoose
-  .connect(connectString)
-  .then(() => {
-    console.log("connected Mongodb Success");
-  })
-  .catch((err) => {
-    console.log("Error Connection");
-  });
+//"mongodb://localhost:27017/shopDEV"
 
-//dev
+//count Connection in ./helpers/check.connect.js
+const { countConnect } = require("../helpers/check.connect");
 
-if (1 == 0) {
-  mongoose.set("debug", true);
-  mongoose.set("debug", { color: true });
+class Database {
+  constructor() {
+    this.connect();
+  }
+
+  //connect
+  connect(type = "mongodb") {
+    if (1 === 1) {
+      mongoose.set("debug", true);
+      mongoose.set("debug", { color: true });
+    }
+
+    mongoose
+      .connect(connectString)
+      .then((_) =>
+        //add here to check connection
+        console.log("Connected Mongodb Success Pro: ", countConnect())
+      )
+      .catch((err) => {
+        console.log("Error Connect");
+      });
+  }
+
+  //static => instance of class , not static => instance of object
+  static getInstance() {
+    //further checking
+    if (!Database.instance) {
+      Database.instance = new Database();
+    }
+
+    //most important
+    return Database.instance;
+  }
 }
 
-module.exports = mongoose; //It will create a new connection => collision
+//create variable to get instance
+const instanceMongoDB = Database.getInstance();
+
+//export instance
+module.exports = instanceMongoDB; //It will create a new connection => collision

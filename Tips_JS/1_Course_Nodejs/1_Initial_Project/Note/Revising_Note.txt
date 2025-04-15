@@ -1,0 +1,24 @@
+// server.js
+  - missing : close - 
+
+
+
+//app.js 
+
+    - missing : handling errors
+                dependency
+
+
+//Mongo DB => Connect to database
+
+      URL or connectString
+
+         mongodb://{host}:port/name
+
+      Using promise to using connect() of mongoose .then(()=>{}).catch((e)=>{})
+
+      Using class to get instance (but this is database => need type = name database to connect correctly)
+
+          level 0 => simple + not for multiple connections+ hard to scale 
+          
+          level xxx => class-based singleton => complex but easy to add feature :))
