@@ -1,0 +1,10 @@
+1/ Assignment : Figma to CSS -> project 1
+
+	1. href = "#" => get back to home
+
+	
+	2. Mulitple changing: bôi đen -> crt + d , then use -> or <- to 
+
+	3. SVG file => they can be scaled to any size without losing quality - Scalable Vector Graphics
+
+	4. alt => for screen reader or lost the image , it will show that alt

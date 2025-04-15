@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Change font size */
+html {
+  font-size: 62.5%;
+}
+
+/* reset that size */
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ################### - Common - ############################# */
+
+/* Turn off decoration of css */
+
+a {
+  text-decoration: none;
+}
+
+/*the size of page  */
+
+.main-content {
+  width: 1170px;
+
+  /* Fit content into the page and prevent  */
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ################### - Header - ############################# */
+.header .body {
+  display: flex;
+}
+
+/* Get distance */
+.nav {
+  margin-left: auto;
+}
+
+/*  */
+
+.nav .ul {
+  display: flex;
+}

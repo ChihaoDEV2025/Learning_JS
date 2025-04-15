@@ -1,0 +1,46 @@
+Struture of websites
+
+
+0/Set font : * =>  box-sizing
+		html => font size
+		body => reset size and add font family (find font on gg font)
+
+
+	set body  style = " h1000 ~ height : 10000px "  => inline css (internal, external) => create scrollingbar
+
+1/ Header  (!= head)
+
+
+	main-content
+		body 
+			logo
+				img
+			nav
+				ul > li > a (link)=> (Home , Contact , Pricing , Reviews ,...)
+
+			btn action =>   add more properties for being resuable
+					btn btn-sign-up : btn is common class
+				
+					not using <button> , use <a> directly	
+
+			
+
+
+2/
+
+
+3/footer
+
+
+
+
+################################--> TIPS - 17:27 - 90.3 js
+
+
+
+
+.nav => margin left : auto => add space into center\
+
+
+
+using calc() => ??????????
