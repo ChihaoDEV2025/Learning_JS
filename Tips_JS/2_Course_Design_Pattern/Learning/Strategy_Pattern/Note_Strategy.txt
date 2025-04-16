@@ -1,6 +1,6 @@
 #########################Introduction#######################
 
-Problem
+Problem => use object for each test and levels
     find the way to
         limit using if else for many cases
     

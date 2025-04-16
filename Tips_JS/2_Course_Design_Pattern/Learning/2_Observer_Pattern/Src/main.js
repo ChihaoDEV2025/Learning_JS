@@ -1,13 +1,23 @@
+/*
+    Explaination:
+        you have Observer Class to contain data
+        Subject class is the list of Observer
+
+        Can you update one and change all of them
+*/
+
 class Observer {
   //data that observer will contain
   constructor(name) {
     this.namePick = name;
   }
 
+  //Main Function => contain the support function => brief
   updataStatus(location) {
     this.goToHelp(location);
   }
 
+  //Support function
   goToHelp(location) {
     console.log(`${this.namePick} is coming to ${JSON.stringify(location)}`);
   }

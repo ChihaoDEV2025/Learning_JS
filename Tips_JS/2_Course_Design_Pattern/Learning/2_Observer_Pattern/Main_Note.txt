@@ -4,3 +4,9 @@ ${JSON.stringify(location)}
 
 
 2. To redirect the previous folders : cd ../../../
+
+
+
+##########################
+Revising: 
+    missed: all
