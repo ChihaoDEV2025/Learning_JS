@@ -1,0 +1,7 @@
+**Explanation
+- You have : Arr , Target
+
+=> Find a pair of numbers in array which is the sum of arr[i] + arr[j] = target
+
+//Missed
+1. find Rest -> check Rest -> if not: save arr[i]

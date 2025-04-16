@@ -1,0 +1,5 @@
+##########################-> Functions <-##############
+
+1. Math.abs  - Math.sqrt - Math.floor
+
+2. Map => map.set(key,value) . map.has  ,...

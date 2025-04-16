@@ -1,0 +1,3 @@
+Divide and Conquer 
+  1. Merger sort
+  2. Quick sort
