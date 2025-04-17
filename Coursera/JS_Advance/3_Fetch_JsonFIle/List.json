@@ -1,0 +1,8 @@
+{
+  "Employees": [
+    { "Name": "Chi hao", "Age": "18" },
+    { "Name": "Chi hao 123", "Age": "18" },
+    { "Name": "Chi hao 456", "Age": "18" },
+    { "Name": "Chi hao 789", "Age": "18" }
+  ]
+}
