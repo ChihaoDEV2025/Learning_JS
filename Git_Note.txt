@@ -36,3 +36,10 @@ nodejs/temp_folder/
 			 errors, or
 			 other information about 
 what a software application, system, or server is doing.
+
+
+I want to make new things and push to the main repo but I don't know how to don
+.
+.
+.
+.
