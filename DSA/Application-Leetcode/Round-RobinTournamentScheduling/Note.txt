@@ -1,0 +1,6 @@
+Requirements:
+  - [ ]  Compete against
+  - [ ]  Each player vs other players exactly **once**,
+  - [ ]  at least : 1 match /day
+  - Minimize the number of matches
+  -  optimizing scheduling efficiency: 

@@ -1,0 +1,7 @@
+>> Some concepts: 
+  pivot is value of arr[middle] 
+  
+Quick sort on class 
+  separate into a half and try to sort and merge
+
+--> cannot use : swap(a,b) because it's not reference

@@ -3,3 +3,15 @@
 1. Math.abs  - Math.sqrt - Math.floor
 
 2. Map => map.set(key,value) . map.has  ,...
+
+
+3. Splice : array.splice(startIndex, deleteCount, item1, item2, ..., itemN);
+
+
+4. Foreach (key,index)
+
+5. Array.push([a,b])
+    let [a,b] = array[i];
+    arr.Foreach(([a,b])=>{
+      
+    })
