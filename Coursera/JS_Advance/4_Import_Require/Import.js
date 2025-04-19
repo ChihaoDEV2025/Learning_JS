@@ -1,5 +1,4 @@
-module.exports = {
-  HelloWorld: () => {
-    console.log("Hello World from Import.js");
-  },
-};
+export function HelloWorld() {
+    console.log("Hello chi hao!!");
+    
+}

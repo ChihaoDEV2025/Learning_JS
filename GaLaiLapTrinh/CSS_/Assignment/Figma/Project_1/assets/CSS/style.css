@@ -46,3 +46,21 @@ a {
 .nav .ul {
   display: flex;
 }
+
+.nav a {
+  color: #5f5b53;
+
+  font-size: 1.6rem; /*16px -> 1.6rem*/
+
+  /* 1. font-family: Poppins; => inherit from body{}*/
+
+  /* 2. text-align: center; */
+
+  /* 3. font-style: normal;
+  font-weight: 400; */
+
+  /* => the Default setting of web pages */
+
+  /* 
+  4. line-height: 28px; 175% */
+}
