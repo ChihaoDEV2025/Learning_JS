@@ -1,12 +1,13 @@
 Struture of websites
 
+//Base of This project: https://github.com/GaLaiLapTrinh/figma-to-html	
 
 0/Set font : * =>  box-sizing
 		html => font size
 		body => reset size and add font family (find font on gg font)
 
 
-	set body  style = " h1000 ~ height : 10000px "  => inline css (internal, external) => create scrollingbar
+	set body  style = " h1000 ~ height : 10000px "  => inline css (internal, external) => create scrollbar
 
 1/ Header  (!= head)
 
@@ -16,15 +17,14 @@ Struture of websites
 			logo
 				img
 			nav
-				ul > li > a (link)=> (Home , Contact , Pricing , Reviews ,...)
+				ul > li (active) > a (link)=> (Home , Contact , Pricing , Reviews ,...)
 
 			btn action =>   add more properties for being resuable
 					btn btn-sign-up : btn is common class
 				
 					not using <button> , use <a> directly	
 
-			
-
+		
 
 2/
 
@@ -38,9 +38,21 @@ Struture of websites
 
 
 
+1. Class active for changing decoration and can be remove or add via JS
 
-.nav => margin left : auto => add space into center\
+2. .nav => margin left : auto => add space into center\
+
+3. //Pseudo class
+		hover: but  not moving text
+			using text-shadow instead of font-weight
+			/* text-shadow: 1px 0 0 currentColor; */
+
+4. Pseudo Element
+
+5. Position : Absolute => adjust the 2 boxes in px
+
+/--------------------Questions
 
 
-
+How to use and convert unit (unit) : 16px-> 1.6em 
 using calc() => ??????????

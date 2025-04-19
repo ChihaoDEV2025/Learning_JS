@@ -43,14 +43,14 @@ a {
 
 /*  */
 
-.nav .ul {
+.nav ul {
   display: flex;
 }
 
 .nav a {
   color: #5f5b53;
-
   font-size: 1.6rem; /*16px -> 1.6rem*/
+  position: relative;
 
   /* 1. font-family: Poppins; => inherit from body{}*/
 
@@ -63,4 +63,31 @@ a {
 
   /* 
   4. line-height: 28px; 175% */
+
+  /* Add more */
+  padding: 8px 21px;
+}
+
+
+/* Hover for active class */
+.nav li.active a,
+.nav a:hover {
+  color: black;
+  /* font-weight: 600; */
+
+  text-shadow: 1px 0 0 currentColor;
+}
+
+/* Generate the underscore for home with active class:  */
+
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: black;
 }
