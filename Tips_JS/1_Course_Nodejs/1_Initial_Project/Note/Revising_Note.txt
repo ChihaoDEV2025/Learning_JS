@@ -22,3 +22,9 @@
           level 0 => simple + not for multiple connections+ hard to scale 
           
           level xxx => class-based singleton => complex but easy to add feature :))
+
+
+//Helper Directory (using mongoose)
+  -> countConnections 
+  -> checkMaxConnections (connections -> cores (maxSize) -> memoryUsage)
+  

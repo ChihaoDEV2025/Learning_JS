@@ -25,3 +25,16 @@ POST {{url_dev}}shop/signup
 
 #############################################################
 5.Mongo DB - revising
+
+        checkMaxConnections => process.memoryUsage.rss 
+                                rss => Resident Set Size 
+                                        Total memory allocated for the process
+        
+        //No adding the specific number => use constant number
+
+
+        //Set interval => millisecond
+
+        //uppercase with underscores : _SECONDS
+
+        /module.exports = { countConnection, checkOverLoad };

@@ -5,9 +5,12 @@
 require("dotenv").config();
 //1. Require express
 const express = require("express");
+const app = express();
+
+
+//Require Middleware
 const morgan = require("morgan");
 const helmet = require("helmet");
-const app = express();
 
 //2. Init middleware
 app.use(morgan("dev"));
