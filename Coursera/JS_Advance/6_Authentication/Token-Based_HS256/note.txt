@@ -1,0 +1,9 @@
+//login
+curl -X POST http://localhost:3000/login \
+-H "Content-Type: application/json" \
+-d '{"username":"user1", "password":"password123"}'
+
+
+//access dashboard
+curl http://localhost:3000/dashboard \
+-H "Authorization: Bearer YOUR_TOKEN_HERE"

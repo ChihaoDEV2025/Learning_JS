@@ -1,0 +1,12 @@
+//request opt
+{
+  "email": "user@example.com"
+}
+
+
+
+//verify
+{
+  "email": "user@example.com",
+  "otp": "123456"  // Replace with the OTP you received
+}
