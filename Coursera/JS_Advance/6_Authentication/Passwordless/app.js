@@ -1,15 +1,21 @@
+//Declare express  + app
+
 const express = require("express");
-const bodyParser = require("body-parser");
+const app = express();
+
+//Authentication => npm
+// const bodyParser = require("body-parser"); => integrate with express
+
 const crypto = require("crypto");
 
-const app = express();
-app.use(bodyParser.json());
+app.use(express.json()); // This will allow you to parse JSON request bodies
 
 // Temporary store for users and their OTPs
 const users = {};
 
 // Request OTP
 app.post("/request-otp", (req, res) => {
+  //
   const { email } = req.body;
 
   if (!email) {
@@ -39,8 +45,4 @@ app.post("/verify-otp", (req, res) => {
   }
 });
 
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+module.exports = app;

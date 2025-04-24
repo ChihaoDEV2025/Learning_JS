@@ -1,6 +1,8 @@
 // index.js
 
 const express = require("express");
+
+//install npm
 const jwt = require("jsonwebtoken");
 
 const app = express();
@@ -41,8 +43,4 @@ app.get("/dashboard", authenticateToken, (req, res) => {
   res.send(`Welcome, ${req.user.username}`);
 });
 
-// ===== Start Server =====
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
-});
+module.exports = app;

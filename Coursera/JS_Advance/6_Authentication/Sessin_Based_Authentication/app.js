@@ -1,13 +1,11 @@
 // app.js
 const express = require("express");
 const session = require("express-session");
-const bodyParser = require("body-parser"); // To parse JSON body
 
 const app = express();
-const PORT = 3000;
 
 // Middleware to parse JSON body
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Middleware for session management
 app.use(
@@ -51,7 +49,4 @@ app.post("/logout", (req, res) => {
   });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
-});
+module.exports = app;

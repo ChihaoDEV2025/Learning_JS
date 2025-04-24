@@ -1,0 +1,2 @@
+// app.get("endpoint", (req,res,next (callback)))
+const { email } = req.body; => req is json format { "email" : ""}
