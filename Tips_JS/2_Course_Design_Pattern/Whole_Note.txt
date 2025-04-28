@@ -8,3 +8,6 @@ object{
 return object[key](parameter)
 
 ========================================================
+
+
+1. Patter for performance -  maintenance - and algorithms -> optimize the code -> run faster 

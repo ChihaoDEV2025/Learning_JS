@@ -1,0 +1,8 @@
+After one thing is changed => every one will receive that stuff => Observer Pattern
+
+1. Push:  Passively receiving data - store in database => can be overload
+        Using Event Emitter => code
+
+
+2. Pull: actively receiving changed data -> pull request -> receive as needed 
+        Fetch API
