@@ -45,7 +45,10 @@ app.post("/logout", (req, res) => {
     if (err) {
       return res.status(500).send("Logout failed");
     }
-    res.send("Logged out successfully");
+    res.clearCookie("connect.sid"); //clear cookie
+    return res.json({
+      message: "Log out successfully", //not ; here due to using ,
+    });
   });
 });
 
