@@ -1,2 +1,4 @@
 #############################-> Functions <- ####################
 1. Slice(0 , 3 )=>  0 1 2 => not include 3
+
+2. items.sort((a, b) => b.ratio - a.ratio); descending

@@ -1,0 +1,9 @@
+==> Using object to return a lot of variables
+        return {
+            totalValue,
+            selected,
+            "The rest of capacity ": capacity,
+  };
+
+//sort
+items.sort((a, b) => b.ratio - a.ratio);
