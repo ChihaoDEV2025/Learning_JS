@@ -7,7 +7,6 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-
 //Require Middleware
 const morgan = require("morgan");
 const helmet = require("helmet");
@@ -37,6 +36,7 @@ countConnect();
 // });
 
 //instead of
+//Just using App one times due to router will receive more address
 app.use("/", require("./routers/index"));
 
 //-------------------------------------------------

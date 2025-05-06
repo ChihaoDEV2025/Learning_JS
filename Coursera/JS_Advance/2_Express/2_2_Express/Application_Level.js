@@ -7,3 +7,5 @@ app.get("/user/about/:id", (req, res) => {
 app.post("/user/about/:id", (req, res) => {
   res.send("User About Page - POST");
 });
+
+//=> just using HTTP request via app => but if need to break down into smaller => using router_level

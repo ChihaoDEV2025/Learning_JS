@@ -6,4 +6,22 @@
 			Ap1_Name?.js
 	
 	
-			
+===============Function
+.then((data) => {
+    // Convert the array into an object, using the 'id' as the key
+    const dataAsObject = data.reduce((acc, post) => {
+      acc[post.id] = post; // Use 'id' as the key
+      return acc;
+    }, {}); //initialize empty object => {}
+
+    console.log(dataAsObject); // Log the data in object format
+  })
+
+  Reduce (()=>{} , initialValue)
+
+  array.reduce((accumulator, currentValue) => {
+
+  // logic to update accumulator
+
+  return accumulator; => pay attention here
+}, initialValue);
