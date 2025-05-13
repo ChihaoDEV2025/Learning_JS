@@ -6,6 +6,7 @@ const axios = require("axios");
 // Using axios.get() to fetch data from an API
 
 //fetch().then(res => !res.ok => return res.json) .then(data => return data) .
+
 // axios
 //   .get("https://jsonplaceholder.typicode.com/posts")
 //   .then((response) => {
@@ -35,3 +36,19 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   .catch((e) => {
     console.log(e);
   });
+
+//--------------------------------Revising
+
+//callback -> promises -> async / await
+
+//The function is an argument for other function
+//req , res , next (callback)
+
+/*
+  ClearHome -> washUP -> hangClothes ->....
+
+  Clear(Next){
+    log ("toi da don nha")
+    washUp(hangclouthes(...))
+  }
+*/
