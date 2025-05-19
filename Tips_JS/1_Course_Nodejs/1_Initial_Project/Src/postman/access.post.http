@@ -1,5 +1,6 @@
-@url_dev = http://localhost:3056/v1/api/
 
+//Check port: 3052 - 3056
+@url_dev = http://localhost:3052/v1/api
 
-### sign up
-POST {{url_dev}}shop/signup
+### Sign up
+POST {{url_dev}}/shop/signup
