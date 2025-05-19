@@ -3,19 +3,47 @@ class MyHeap {
     this.arr = [];
   }
 
+  //Helper Function
   isEmpty() {
     return this.arr.length === 0;
   }
+
+  Swap(i, j) {
+    [this.arr[i], this.arr[j]] = [this.arr[j], this.arr[i]];
+  }
+
+  heapifyDown(currentIndex) {
+    // Heapify down
+    const size = this.arr.length;
+
+    while (true) {
+      let leftChild = 2 * currentIndex + 1; // or could be 2 * current index
+      let rightChild = 2 * currentIndex + 2; // or could be 2 * current index +1
+      let smallest = currentIndex;
+
+      if (leftChild < size && this.arr[leftChild] < this.arr[smallest]) {
+        smallest = leftChild;
+      }
+
+      if (rightChild < size && this.arr[rightChild] < this.arr[smallest]) {
+        smallest = rightChild;
+      }
+
+      if (smallest !== currentIndex) {
+        this.Swap(currentIndex, smallest);
+        currentIndex = smallest;
+      } else {
+        break;
+      }
+    }
+  }
+  //Main Function
 
   peek() {
     if (this.isEmpty()) {
       throw new Error("Heap is empty!");
     }
     return this.arr[0];
-  }
-
-  Swap(i, j) {
-    [this.arr[i], this.arr[j]] = [this.arr[j], this.arr[i]];
   }
 
   add(value) {
@@ -36,39 +64,33 @@ class MyHeap {
       throw new Error("Heap is empty!");
     }
 
+    if (this.arr.length === 1) {
+      return this.arr.pop();
+    }
+
     const minValue = this.arr[0];
-    const lastValue = this.arr.pop();
+    this.arr[0] = this.arr.pop(); // Replace root with last element
+    this.heapifyDown(0); // Re-heapify
 
-    if (!this.isEmpty()) {
-      this.arr[0] = lastValue;
+    return minValue;
+  }
 
-      // Heapify down
-      let currentIndex = 0;
-      const size = this.arr.length;
-
-      while (true) {
-        let leftChild = 2 * currentIndex + 1;
-        let rightChild = 2 * currentIndex + 2;
-        let smallest = currentIndex;
-
-        if (leftChild < size && this.arr[leftChild] < this.arr[smallest]) {
-          smallest = leftChild;
-        }
-
-        if (rightChild < size && this.arr[rightChild] < this.arr[smallest]) {
-          smallest = rightChild;
-        }
-
-        if (smallest !== currentIndex) {
-          this.Swap(currentIndex, smallest);
-          currentIndex = smallest;
-        } else {
-          break;
-        }
+  remove(v) {
+    //Find the v position
+    let curIndex = -1;
+    for (let i = 0; i < this.arr.length; i++) {
+      if (this.arr[i] === v) {
+        curIndex = i;
+        break;
       }
     }
 
-    return minValue;
+    if (curIndex === -1) {
+      return new Error("Element is not exist!!");
+    }
+
+    //assign that v to the last element
+    this.arr[curIndex] = this.arr.pop();
   }
 }
 
@@ -79,5 +101,10 @@ myheap.add(5);
 myheap.add(1);
 myheap.add(6);
 
+//Take and heapify down
+while (!myheap.isEmpty()) {
+  console.log(myheap.poll());
+}
+
+//Return the whole heap => is different
 console.log(myheap.arr);
-a;
