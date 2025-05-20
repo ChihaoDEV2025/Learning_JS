@@ -6,7 +6,7 @@ const os = require("os");
 const process = require("process");
 const _SECONDS = 5000;
 //countConnections
-let countConnection = function () {
+let countConnect = function () {
   const NumConnections = mongoose.connection.length;
   console.log("Number of connections: " + NumConnections);
 };
@@ -21,7 +21,7 @@ let checkOverLoad = function () {
     const memoryUsage = process.memoryUsage.rss;
 
     //Active Connections
-    console.log("Active Connections: " + connections);
+    console.log("Active Connections: " + numConnections);
 
     //cMemory Usage
     console.log(`Memory Usage:: ${memoryUsage / 1024 / 1024} MB`);
@@ -38,4 +38,6 @@ let checkOverLoad = function () {
 
 //export
 
-module.exports = { countConnection, checkOverLoad };
+module.exports = { countConnect, checkOverLoad };
+
+//Export is similar to the name function => import as well
