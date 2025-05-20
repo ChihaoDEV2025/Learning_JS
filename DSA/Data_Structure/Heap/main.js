@@ -90,7 +90,9 @@ class MyHeap {
     }
 
     //assign that v to the last element
-    this.arr[curIndex] = this.arr.pop();
+    this.arr[curIndex] = this.arr[this.arr.length - 1];
+    this.arr.pop();
+    this.heapifyDown(curIndex);
   }
 }
 
@@ -102,9 +104,17 @@ myheap.add(1);
 myheap.add(6);
 
 //Take and heapify down
+// while (!myheap.isEmpty()) {
+//   console.log(myheap.poll());
+// }
+
+//Return the whole heap => is different
+// console.log(myheap.arr);
+
+//Test Remove
+console.log("peek: " + myheap.peek());
+myheap.remove(10);
+
 while (!myheap.isEmpty()) {
   console.log(myheap.poll());
 }
-
-//Return the whole heap => is different
-console.log(myheap.arr);

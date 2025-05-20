@@ -10,13 +10,14 @@ npm i dotenv --save-dev
 //middleware
 npm i morgan --save-dev
 npm i  helmet --save-dev
-
+npm i cors --save-dev
 
 
 
 //encrypt
 npm i bcrypt --save-dev
 npm i crypto --save-dev
+
 
 
 
