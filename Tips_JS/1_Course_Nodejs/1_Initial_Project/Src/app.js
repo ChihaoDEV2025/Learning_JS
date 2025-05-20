@@ -7,6 +7,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+app.use(express.json());
 //Require Middleware
 const morgan = require("morgan");
 const helmet = require("helmet");
@@ -19,12 +20,12 @@ app.use(helmet());
 require("./dbs/init.mongodb");
 
 //to extract the function
-const { countConnect } = require("./helpers/check.connect");
+const { countConnection } = require("./helpers/check.connect");
 
 //check overload
 const { checkOverLoad } = require("./helpers/check.connect");
 checkOverLoad();
-countConnect();
+countConnection();
 
 //-------------------------------------------------
 //3.1 init router //cut here
