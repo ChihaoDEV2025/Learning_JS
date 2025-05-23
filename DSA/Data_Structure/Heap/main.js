@@ -46,6 +46,10 @@ class MyHeap {
     return this.arr[0];
   }
 
+  Swap(i, j) {
+    [this.arr[i], this.arr[j]] = [this.arr[j], this.arr[i]];
+  }
+
   add(value) {
     this.arr.push(value);
     let currentIndex = this.arr.length - 1;
@@ -56,6 +60,7 @@ class MyHeap {
       this.Swap(currentIndex, parentIndex);
       currentIndex = parentIndex;
       parentIndex = Math.floor((currentIndex - 1) / 2);
+      console.log(parentIndex, currentIndex, this.arr);
     }
   }
 
@@ -101,10 +106,5 @@ myheap.add(5);
 myheap.add(1);
 myheap.add(6);
 
-//Take and heapify down
-while (!myheap.isEmpty()) {
-  console.log(myheap.poll());
-}
-
-//Return the whole heap => is different
 console.log(myheap.arr);
+a;

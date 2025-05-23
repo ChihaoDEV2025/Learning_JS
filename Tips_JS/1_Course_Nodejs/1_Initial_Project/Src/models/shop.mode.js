@@ -45,3 +45,6 @@ var shopSchema = new mongoose.Schema(
 
 //Export the model
 module.exports = mongoose.model(DOCUMENT_NAME, shopSchema);
+
+
+!dm
