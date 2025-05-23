@@ -1,49 +1,52 @@
 "use strict";
 
-const { model, Schema, Types } = require("mongoose"); // Erase if already required
+// Import mongoose (make sure to include this)
+const mongoose = require("mongoose");
 
-//
-const DOCUMENT_NAME = "Shop"; //to export
+const { Schema } = mongoose; // We don't need `Types` if we're not using it.
+
+const DOCUMENT_NAME = "Shop";
 const COLLECTION_NAME = "Shops";
 
 // Declare the Schema of the Mongo model
-var shopSchema = new mongoose.Schema(
+var shopSchema = new Schema(
   {
     name: {
       type: String,
-      trim: true, //Permit to use the space
+      trim: true, // Allow spaces at the start or end
       maxLength: 150,
     },
     email: {
       type: String,
-      unique: true,
+      unique: true, // Email should be unique
       trim: true,
+      required: [true, "Email is required"],
     },
     password: {
       type: String,
-      required: true,
+      required: [true, "Password is required"],
     },
     status: {
       type: String,
-      enum: ["active", "inactive"],
+      enum: ["active", "inactive"], // Enum restricts to these two values
       default: "inactive",
     },
     verify: {
-      type: Schema.Types.Boolean,
+      type: Boolean, // Boolean type, no need to use `Schema.Types.Boolean`
       default: false,
     },
     roles: {
-      type: Array,
+      type: [String], // An array of strings
       default: [],
     },
   },
   {
-    timestamps: true,
+    timestamps: true, // Automatically adds `createdAt` and `updatedAt`
     collection: COLLECTION_NAME,
   }
 );
 
-//Export the model
+// Export the model
 module.exports = mongoose.model(DOCUMENT_NAME, shopSchema);
 
 

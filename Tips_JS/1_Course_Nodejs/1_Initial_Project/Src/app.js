@@ -11,10 +11,12 @@ app.use(express.json());
 //Require Middleware
 const morgan = require("morgan");
 const helmet = require("helmet");
+const cors = require("cors");
 
 //2. Init middleware
 app.use(morgan("dev"));
 app.use(helmet());
+app.use(cors());
 
 //3. init db
 require("./dbs/init.mongodb");
@@ -24,8 +26,8 @@ const { countConnection } = require("./helpers/check.connect");
 
 //check overload
 const { checkOverLoad } = require("./helpers/check.connect");
-checkOverLoad();
-countConnection();
+// checkOverLoad();
+// countConnection();
 
 //-------------------------------------------------
 //3.1 init router //cut here
@@ -38,7 +40,8 @@ countConnection();
 
 //instead of
 //Just using App one times due to router will receive more address
-    app.use("/", require("./routers/index"));
+
+app.use("/", require("./routers/index"));
 
 //-------------------------------------------------
 
