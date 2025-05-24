@@ -1,0 +1,24 @@
+//Initialize
+npm init -y
+npm i express --save-dev
+npm i mongoose --save-dev
+npm i nodemon --save-dev
+
+npm i dotenv --save-dev
+
+
+//middleware
+npm i morgan --save-dev
+npm i  helmet --save-dev
+npm i cors --save-dev
+
+
+
+//encrypt
+npm i bcrypt --save-dev
+npm i crypto --save-dev
+
+
+
+
+//more

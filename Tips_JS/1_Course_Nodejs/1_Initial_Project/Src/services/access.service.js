@@ -1,6 +1,7 @@
 "use strict";
 
 const shopModel = require("../models/shop.mode");
+const KeyTokenService = require("../services/keytoken.service");
 
 //Middleware : bcrypt => encrypt password ; crypto => generate the pair of key
 const bcrypt = require("bcrypt");
@@ -43,9 +44,23 @@ class AccessService {
         const { privateKey, publicKey } = crypto.generateKeyPairSync("rsa", {
           modulusLength: 4096,
         });
-
-        console.log({ privateKey, publicKey });
       }
+      console.log({ privateKey, publicKey });
+
+      const publicKeyString = await KeyTokenService.createKeyToken({
+        userId: newShop._id,
+      });
+
+      if (!publicKeyString) {
+        return {
+          code: "xxxx",
+          message: "publicKeyString error",
+        };
+      }
+
+
+      //create token pair
+      const tokens = await createTokenPair({userId: newShop})
     } catch (error) {
       return {
         code: "xxx",

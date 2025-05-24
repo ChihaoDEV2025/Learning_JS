@@ -1,5 +1,7 @@
 "use strict";
 
+const AccessService = require("../services/access.service");
+
 class AccessController {
   signUp = async (req, res, next) => {
     try {
@@ -9,10 +11,7 @@ class AccessController {
             201: created
         */
 
-      return res.status(201).json({
-        code: "2001", //dev definition number and depend on each team
-        metadata: { userid: 1 },
-      });
+      return res.status(201).json(await AccessService.signUp(req.body));
     } catch (e) {
       next(e);
     }
