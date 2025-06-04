@@ -1,29 +1,22 @@
 class Factorial {
   constructor(number) {
     this.x = [];
-    this.n = number; //the number of integer numbers
-    this.used = [];
-    for (let i = 1; i <= this.n; i++) {
-      this.used.push(false);
-    }
+    this.n = number;
+    this.used = new Array(this.n).fill(false);
   }
 
   generate(i) {
-    //0 1 2 = j
-    //i =
+    if (i === this.n) {
+      console.log(this.x.slice());
+      return;
+    }
 
     for (let j = 0; j < this.n; j++) {
       if (!this.used[j]) {
         this.used[j] = true;
         this.x[i] = j + 1;
 
-        //If i start at 0
-        //I can't reach N => can't render
-        if (i < this.n) {
-          this.generate(i + 1);
-        } else {
-          console.log(this.x);
-        }
+        this.generate(i + 1);
 
         this.used[j] = false;
       }
