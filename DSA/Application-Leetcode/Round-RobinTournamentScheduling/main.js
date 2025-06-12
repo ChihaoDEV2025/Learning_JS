@@ -1,34 +1,31 @@
 function generateMinimalMatchSchedule2D(numPlayers) {
-  const allMatches = [];
-
-  // Step 1: Generate all unique matchups
-  for (let i = 0; i < numPlayers; i++) {
-    for (let j = i + 1; j < numPlayers; j++) {
-      allMatches.push([i, j]);
-    }
-  }
-
   const schedule = [];
+  const n = numPlayers;
+  const isOdd = n % 2 !== 0;
+  const numDays = isOdd ? n : n - 1;
+  const players = Array.from({ length: n }, (_, i) => i);
 
-  // Step 2: Distribute matches over days (minimize matches/day)
-  while (allMatches.length > 0) {
-    const day = [];
-    const playedToday = new Set();
+  // Handle odd number of players by adding a dummy player
+  if (isOdd) players.push(-1); // -1 represents no match (bye)
 
-    for (let i = 0; i < allMatches.length; ) {
-      const [a, b] = allMatches[i];
+  const m = players.length; // m = n for even n, n+1 for odd n
 
-      if (!playedToday.has(a) && !playedToday.has(b)) {
-        day.push([a, b]);
-        playedToday.add(a);
-        playedToday.add(b);
-        allMatches.splice(i, 1); // remove matched pair
-      } else {
-        i++;
+  // Circle method: fix player 0, rotate others
+  for (let day = 0; day < numDays; day++) {
+    const dayMatches = [];
+    for (let i = 0; i < m / 2; i++) {
+      const p1 = players[i];
+      const p2 = players[m - 1 - i];
+      // Skip dummy player (-1)
+      if (p1 !== -1 && p2 !== -1) {
+        dayMatches.push([p1, p2]);
       }
     }
+    schedule.push(dayMatches);
 
-    schedule.push(day); // one row = one day
+    // Rotate players: move last to front, shift others right
+    const last = players.pop();
+    players.splice(1, 0, last);
   }
 
   return schedule;
@@ -42,7 +39,7 @@ const schedule = generateMinimalMatchSchedule2D(numPlayers);
 console.log("Match Schedule (2D Array):");
 console.log(schedule);
 
-// Optional: formatted output
+// Formatted output
 schedule.forEach((day, i) => {
   console.log(`Day ${i + 1}:`);
   day.forEach(([a, b]) => {
